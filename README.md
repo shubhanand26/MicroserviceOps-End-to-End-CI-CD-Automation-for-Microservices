@@ -7,7 +7,8 @@ This project implements a complete DevOps pipeline for a microservices applicati
 - **Orchestration**: Kubernetes for container management.
 - **CI/CD**: Jenkins pipeline for continuous integration and deployment.
 
-![DevOps Architecture]()
+![MicroserviceOps Project arch](https://github.com/user-attachments/assets/0b93aa60-e3cc-4b2a-ab4b-faf4b6dfbf07)
+
 
 ## Table of Contents
 - [Project Overview](#project-overview)
