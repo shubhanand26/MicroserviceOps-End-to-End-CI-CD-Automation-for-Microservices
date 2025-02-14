@@ -1,0 +1,19 @@
+---
+
+- name: Copy Kubernetes manifests to the primary node 
+  hosts: primary-node
+  tasks: 
+  - name: Copy Kubernetes configuration files to node
+    copy: 
+      src: ../kubernetes/
+      dest: /root/kubernetes/
+    become: yes
+
+  - name: Deploy the database service
+    command: "kubectl apply -f /root/kubernetes/database.yml"
+
+  - name: Deploy the API backend service
+    command: "kubectl apply -f /root/kubernetes/api-backend.yml"
+
+  - name: Deploy the frontend service
+    command: "kubectl apply -f /root/kubernetes/frontend.yml"
